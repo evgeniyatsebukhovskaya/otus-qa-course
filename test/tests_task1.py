@@ -22,42 +22,40 @@ def function_fixture():
 def test_lenght_of_list(session_fixture, module_fixture, function_fixture):
     list = [1, 2, 3, 4, 5, 6, 7, 8]
     lenth_of_list = len(list)
-    if(lenth_of_list == 8):
-        pass
+    if lenth_of_list == 8:
+        print("test N1 is passed")
 
 def test_summ_of_two_strings(session_fixture, module_fixture, function_fixture):
     str1 = 'stro'
     str2 = 'ka'
     str = str1+str2
-    if(str == 'stroka'):
-        pass
+    if str == 'stroka':
+        print("test N2 is passed")
 
 def test_multiply_number_to_string(session_fixture, module_fixture, function_fixture):
     str = 'abc'
     multiplied_str = 3*str
-    if(multiplied_str == 'abcabcabc'):
-        pass
+    if multiplied_str == 'abcabcabc':
+        print("test N3 is passed")
 
 def test_clear_of_list(session_fixture, module_fixture, function_fixture):
     list = ['aa', 'bb', 'cc']
     list.clear()
-    if(len(list) == 0):
-        pass
+    if len(list) == 0:
+        print("test N4 is passed")
 
 def test_ammount_of_x_in_list(session_fixture, module_fixture, function_fixture):
     list = ['qq', 'x', 'aaz', 'x']
     ammount = list.count('x')
-    print(ammount)
-    if(ammount == 2):
-        pass
+    if ammount == 2:
+        print("test N5 is passed")
 
 def test_reversed_list(session_fixture, module_fixture, function_fixture):
     list = ['first one', 'middle one', 'last one']
     list.reverse()
     first_of_reversed = list[0]
-    print(first_of_reversed)
-    if(first_of_reversed == 'last one'):
-        pass
+    if first_of_reversed == 'last one':
+        print("test N6 is passed")
 
 def test_set_consist_of_unique_elements(session_fixture, module_fixture, function_fixture):
     s = set()
@@ -65,11 +63,24 @@ def test_set_consist_of_unique_elements(session_fixture, module_fixture, functio
     s.add(2)
     s.add(1)
     lenth = len(s)
-    print(lenth)
-    if(lenth == 2):
-        pass
+    if lenth == 2:
+        print("test N7 is passed")
 
 def test_getting_dictionary_value_by_key(session_fixture, module_fixture, function_fixture):
     d = dict(key1='value1', key2='value2', key3='value3')
-    if d['key1'] == 'value':
-        print("test is passed")
+    if d['key1'] == 'value1':
+        print("test N8 is passed")
+
+def test_switch_values(session_fixture, module_fixture, function_fixture):
+    a = 5
+    b = 10
+    a, b = b, a
+    if a == 10:
+        print("test N9 is passed")
+
+def test_insert_value(session_fixture, module_fixture, function_fixture):
+    l = ['first one', 'middle one', 'last one']
+    l.insert(0, 'new first one')
+    if l[0] == 'new first one':
+        print("test N10 is passed")
+
