@@ -68,3 +68,8 @@ def test_set_consist_of_unique_elements(session_fixture, module_fixture, functio
     print(lenth)
     if(lenth == 2):
         pass
+
+def test_getting_dictionary_value_by_key(session_fixture, module_fixture, function_fixture):
+    d = dict(key1='value1', key2='value2', key3='value3')
+    if d['key1'] == 'value':
+        print("test is passed")
