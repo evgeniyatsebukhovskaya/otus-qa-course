@@ -26,7 +26,7 @@ combinations = islice(product(names, cities, credit_cards, vklad, ipoteka), 100)
 file = list(combinations)
 
 path_to_result_file = Path.cwd() / 'data' / 'results.csv'
-with open(path_to_result_file, 'w') as f:
+with open(path_to_result_file, 'w', encoding='cp1251') as f:
     writer = csv.writer(f, delimiter=',')
     for line in file:
         writer.writerow(line)
